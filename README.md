@@ -4,6 +4,12 @@
 
 ### <a name="1">Демонстрация проекта "Чат"</a>
 
+Вход в проект
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/63869857/202270539-e83d4bf8-d2c4-4fd8-8f9d-2230c7ae0303.png">
+
+Интерфейс проекта "Чат"
+
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/63869857/202247192-3dad31ed-4187-4655-b25f-15660faca2bb.png">
 
 ### <a name="2">Описание проекта</a>
