@@ -1,3 +1,19 @@
+### <a name="2">2. Инструкция по запуску проекта</a> 
+
+Скачать с GitHub
+
+    git clone https://github.com/al-zv/macro.git
+    
+Запустить проект через Docker (Docker должен быть установлен и запущен)
+
+    ./vendor/bin/sail up -d
+
+Выполнить миграции
+
+    ./vendor/bin/sail artisan migrate
+
+
+
 Демонстрация проекта
 
 
