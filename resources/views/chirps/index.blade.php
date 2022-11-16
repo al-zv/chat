@@ -4,11 +4,11 @@
             @csrf
             <textarea
                 name="message"
-                placeholder="{{ __('What\'s on your mind?') }}"
+                placeholder="{{ __('Напишите ваше сообщение') }}"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >{{ old('message') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
-            <x-primary-button class="mt-4">{{ __('Chirp') }}</x-primary-button>
+            <x-primary-button class="mt-4">{{ __('Отправить') }}</x-primary-button>
         </form>
  
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
@@ -37,13 +37,13 @@
                                     </x-slot>
                                     <x-slot name="content">
                                         <x-dropdown-link :href="route('chirps.edit', $chirp)">
-                                            {{ __('Edit') }}
+                                            {{ __('Изменить') }}
                                         </x-dropdown-link>
                                         <form method="POST" action="{{ route('chirps.destroy', $chirp) }}">
                                             @csrf
                                             @method('delete')
                                             <x-dropdown-link :href="route('chirps.destroy', $chirp)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                {{ __('Delete') }}
+                                                {{ __('Удалить') }}
                                             </x-dropdown-link>
                                         </form>
                                     </x-slot>

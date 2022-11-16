@@ -12,6 +12,10 @@ class Chirp extends Model
         'message',
     ];
 
+    /**
+     * Обратная связь один ко многим: сообщений с пользователем.
+     */
+
     public function user()
     {
         return $this->belongsTo(User::class);

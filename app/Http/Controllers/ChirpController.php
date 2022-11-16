@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ChirpController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Отображаение сообщений чата, сортировка по последним добавленным.
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,7 +20,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Отображение формы для создания нового ресурса.
      *
      * @return \Illuminate\Http\Response
      */
@@ -30,7 +30,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохранение сообщения от пользователя.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -47,7 +47,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Отображение указанного ресурса.
      *
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
@@ -58,7 +58,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Отображение формы для редактирования сообщения.
      *
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
@@ -73,7 +73,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Обновление сообщения.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Chirp  $chirp
@@ -84,7 +84,7 @@ class ChirpController extends Controller
         $this->authorize('update', $chirp);
  
         $validated = $request->validate([
-            'message' => 'required|string|max:255',
+            'message' => 'required|string',
         ]);
  
         $chirp->update($validated);
@@ -93,7 +93,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Удаление сообщения.
      *
      * @param  \App\Models\Chirp  $chirp
      * @return \Illuminate\Http\Response
